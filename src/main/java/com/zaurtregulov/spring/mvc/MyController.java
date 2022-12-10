@@ -2,12 +2,14 @@ package com.zaurtregulov.spring.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
 @Controller //Контроллер - разновидность компонента. Когда будет происходить сканирование, контроллер будет найден.
+@RequestMapping("/employee")
 public class MyController {
 
     @RequestMapping("/")
@@ -15,35 +17,42 @@ public class MyController {
         return "first-view";
     }
 
+//    @RequestMapping("/askDetails")
+//    public String askEmployeeDetails() {
+//        return "ask-emp-details-view";
+//    }
+
     @RequestMapping("/askDetails")
-    public String askEmployeeDetails() {
+    public String askEmployeeDetails(Model model) {
+//        Employee emp = new Employee();
+//        emp.setName("Mars");
+//        emp.setSurname("Ga");
+//        emp.setSalary(500);
+
+        model.addAttribute("employee", new Employee());
+
         return "ask-emp-details-view";
     }
 
-//    @RequestMapping("/showDetails")
-//    public String showEmpDetails() {
-//        return "show-emp-details-view";
-//    }
-
-//    @RequestMapping("/showDetails")
-//    public String showEmpDetails(HttpServletRequest request, Model model) {
-//        String empName = request.getParameter("employeeName");
-//        empName = "Mr. " + empName;
-//        //Модель это контейнер для каких угодно данных
-//        model.addAttribute("nameAttribute", empName);
-//        model.addAttribute("description", " - udemy instructor");
-//        return "show-emp-details-view";
-//    }
-
     @RequestMapping("/showDetails")
-    //@RequestParam - получаем на бэк данные от пользователя
-    //Аннотация @RequestParam позволяет spring захватывать входные данные, которые
-    // могут быть переданы в виде запроса, данных формы или любых произвольных пользовательских данных.
-    // Он используется для привязки параметра веб-запроса к параметру метода.
-    public String showEmpDetails(@RequestParam("employeeName") String empName, Model model) {
-        empName = "Mr. " + empName + "!";
-        //Модель это контейнер для каких угодно данных
-        model.addAttribute("nameAttribute", empName);
+    public String showEmpDetails(@ModelAttribute("employee") Employee emp) {
+
+        emp.setName("Mr. " + emp.getName());
+        emp.setSurname(emp.getSurname() + "!");
+        emp.setSalary(emp.getSalary() * 10);
+
         return "show-emp-details-view";
     }
+
+//    @RequestMapping("/showDetails")
+//    //@RequestParam - получаем на бэк данные от пользователя
+//    //Аннотация @RequestParam позволяет spring захватывать входные данные, которые
+//    // могут быть переданы в виде запроса, данных формы или любых произвольных пользовательских данных.
+//    // Он используется для привязки параметра веб-запроса к параметру метода.
+//    public String showEmpDetails(@RequestParam("employeeName") String empName, Model model) {
+//        empName = "Mr. " + empName + "!";
+//        //Модель это контейнер для каких угодно данных
+//        model.addAttribute("nameAttribute", empName);
+//        return "show-emp-details-view";
+//    }
 }
