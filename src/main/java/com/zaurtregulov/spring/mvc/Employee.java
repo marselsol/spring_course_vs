@@ -1,11 +1,19 @@
 package com.zaurtregulov.spring.mvc;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min=2, message = "name must be minimum 2 symbols")
     private String name;
 
+//    @NotEmpty(message = "surname is obyazatelnoe field")
+    //@NotBlank делает то же самое что NotEmpty и еще проверяет чтобы поле не состояло только из одних пробелов
+    @NotBlank(message = "surname is obyazatelnoe field")
     private String surname;
 
     private int salary;
