@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4597cc2-1eec-4bf5-9d47-9c0a8813ce37" name="Changes" comment="laptop 060 done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zaurtregulov/spring/mvc/Employee.java" afterDir="false" />
+    <list default="true" id="c4597cc2-1eec-4bf5-9d47-9c0a8813ce37" name="Changes" comment="laptop 062 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaurtregulov/spring/mvc/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaurtregulov/spring/mvc/MyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/lessons" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lessons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zaurtregulov/spring/mvc/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zaurtregulov/spring/mvc/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/ask-emp-details-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/ask-emp-details-view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/show-emp-details-view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/show-emp-details-view.jsp" afterDir="false" />
     </list>
@@ -175,7 +173,8 @@
       <workItem from="1670675476872" duration="41000" />
       <workItem from="1670675597311" duration="3614000" />
       <workItem from="1670705353699" duration="5000" />
-      <workItem from="1670705450691" duration="2041000" />
+      <workItem from="1670705450691" duration="2437000" />
+      <workItem from="1670760036453" duration="2928000" />
     </task>
     <task id="LOCAL-00001" summary="laptop 060 done">
       <created>1670699340771</created>
@@ -184,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670699340771</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="laptop 062 done">
+      <created>1670707787703</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670707787703</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +209,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="laptop 060 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="laptop 060 done" />
+    <MESSAGE value="laptop 062 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="laptop 062 done" />
   </component>
 </project>
